@@ -1,0 +1,412 @@
+{
+    "JavaScript": [
+        {
+            "question": "What are closures in JavaScript?",
+            "answer": "Closures are functions that retain access to their lexical scope, even when the function is executed outside that scope. This allows for encapsulation and the creation of private variables."
+        },
+        {
+            "question": "Explain the concept of 'hoisting' in JavaScript.",
+            "answer": "Hoisting is JavaScript's behavior of moving declarations to the top of the current scope during the compile phase. This applies to variables and function declarations, but not to function expressions."
+        },
+        {
+            "question": "What is the difference between `==` and `===` in JavaScript?",
+            "answer": "`==` performs type coercion before comparison, while `===` checks for both value and type equality without type conversion."
+        },
+        {
+            "question": "What is the purpose of `this` keyword in JavaScript?",
+            "answer": "The `this` keyword refers to the object that is currently executing the code. Its value depends on the context in which it is used."
+        },
+        {
+            "question": "What are JavaScript Promises?",
+            "answer": "Promises are objects representing the eventual completion or failure of an asynchronous operation. They allow for handling asynchronous results in a more manageable way compared to callbacks."
+        },
+        {
+            "question": "Explain the concept of 'event delegation' in JavaScript.",
+            "answer": "Event delegation is a technique where you attach a single event listener to a parent element to manage events for multiple child elements. This improves performance and simplifies event handling."
+        },
+        {
+            "question": "What are 'async' and 'await' in JavaScript?",
+            "answer": "The `async` keyword is used to define a function that returns a promise, while `await` is used to pause the execution of an `async` function until the promise is resolved, allowing for cleaner and more readable asynchronous code."
+        },
+        {
+            "question": "How do you create a private variable in JavaScript?",
+            "answer": "Private variables can be created using closures or the `#` syntax introduced in ES2022. Closures allow you to define variables in a function's scope that are not accessible from outside the function."
+        },
+        {
+            "question": "What is the use of the `bind()` method in JavaScript?",
+            "answer": "The `bind()` method creates a new function with a specified `this` value and arguments. It is used to ensure that a function is called with a specific `this` context, regardless of how it is invoked."
+        }
+    ],
+    "Python": [
+        {
+            "question": "What is Python, and what are its key features?",
+            "answer": "Python is a high-level, interpreted programming language known for its readability, simplicity, and flexibility. Key features include dynamic typing, automatic memory management, extensive standard libraries, and support for multiple programming paradigms like procedural, object-oriented, and functional programming."
+        },
+        {
+            "question": "Explain the difference between Python 2 and Python 3.",
+            "answer": "Python 3 introduced several changes and improvements over Python 2, including better Unicode support, print function as a built-in, new syntax for integer division, and the removal of old-style classes. Python 3 is the future of Python and is not backward-compatible with Python 2."
+        },
+        {
+            "question": "What is PEP 8, and why is it important?",
+            "answer": "PEP 8 is the Python Enhancement Proposal that provides guidelines for writing clean and readable Python code. It covers topics like indentation, variable naming conventions, line length, and more, helping developers maintain consistency and improve code readability."
+        },
+        {
+            "question": "How does Python manage memory?",
+            "answer": "Python manages memory using a private heap that contains all Python objects and data structures. The memory management in Python involves a built-in garbage collector, which reclaims memory by automatically deleting objects that are no longer referenced."
+        },
+        {
+            "question": "What are Python decorators, and how are they used?",
+            "answer": "Decorators are a way to modify or extend the behavior of functions or methods without changing their code. A decorator is a function that takes another function as an argument, adds some functionality to it, and returns it. Decorators are commonly used for logging, access control, and memoization."
+        },
+        {
+            "question": "What is the difference between a list and a tuple in Python?",
+            "answer": "Lists are mutable, meaning their elements can be changed after creation. Tuples are immutable, meaning their elements cannot be changed. Lists are defined using square brackets [], while tuples are defined using parentheses ()."
+        },
+        {
+            "question": "Explain the concept of list comprehensions in Python.",
+            "answer": "List comprehensions provide a concise way to create lists. They consist of brackets containing an expression followed by a for clause, and optionally additional for or if clauses. For example, `[x**2 for x in range(10)]` generates a list of squares of numbers from 0 to 9."
+        },
+        {
+            "question": "What is a lambda function in Python?",
+            "answer": "A lambda function is an anonymous, small function defined using the `lambda` keyword. It can take any number of arguments but only has one expression. The expression is evaluated and returned. Example: `lambda x: x + 1` returns a function that adds 1 to its argument."
+        },
+        {
+            "question": "How do you handle exceptions in Python?",
+            "answer": "Exceptions in Python are handled using `try`, `except`, `else`, and `finally` blocks. The `try` block contains the code that might raise an exception, the `except` block handles the exception, the `else` block runs if no exception is raised, and the `finally` block runs regardless of whether an exception was raised."
+        },
+        {
+            "question": "What are Python modules and packages?",
+            "answer": "A module is a single Python file containing related variables, functions, and classes. A package is a collection of modules organized in directories with an `__init__.py` file, allowing them to be imported as a package. Modules and packages help organize code into reusable components."
+        },
+        {
+            "question": "What is the difference between deep copy and shallow copy in Python?",
+            "answer": "A shallow copy creates a new object but does not create copies of nested objects; it only copies references to them. A deep copy creates a new object and recursively copies all objects within it, meaning all nested objects are also copied. The `copy` module provides functions for both types of copies."
+        },
+        {
+            "question": "What is a Python generator?",
+            "answer": "A generator is a special type of iterator that yields items one at a time using the `yield` keyword, rather than returning them all at once. Generators are memory efficient because they generate values on the fly and do not store the entire sequence in memory."
+        },
+        {
+            "question": "Explain the Global Interpreter Lock (GIL) in Python.",
+            "answer": "The Global Interpreter Lock (GIL) is a mutex that protects access to Python objects, preventing multiple native threads from executing Python bytecodes at once in a single process. This means that in CPython, only one thread can execute Python code at a time, which can be a limitation for CPU-bound multi-threaded programs."
+        },
+        {
+            "question": "How do you work with files in Python?",
+            "answer": "Files in Python are handled using the `open()` function, which returns a file object. You can read from or write to a file using methods like `read()`, `readline()`, `write()`, and `writelines()`. Files should be properly closed after use, either explicitly with `close()` or implicitly using a `with` statement."
+        },
+        {
+            "question": "What are Python's built-in data types?",
+            "answer": "Python has several built-in data types, including integers (int), floating-point numbers (float), strings (str), lists (list), tuples (tuple), dictionaries (dict), sets (set), and boolean (bool). Each data type has its own methods and operations."
+        },
+        {
+            "question": "What is the difference between the `__init__` and `__new__` methods in Python?",
+            "answer": "`__init__` is the initializer method, called after the instance is created. It's used to initialize the instance's attributes. `__new__` is the method responsible for creating a new instance of a class. It's less commonly used but can be overridden when custom object creation is required."
+        },
+        {
+            "question": "What is the difference between the `is` and `==` operators?",
+            "answer": "`is` checks for object identity, meaning it returns `True` if two references point to the same object in memory. `==` checks for value equality, meaning it returns `True` if the values of two objects are equal, even if they are different objects in memory."
+        },
+        {
+            "question": "What is monkey patching in Python?",
+            "answer": "Monkey patching is a technique used to modify or extend the behavior of modules or classes at runtime. It can be useful in testing or extending third-party code, but it should be used carefully as it can lead to unexpected behavior."
+        },
+        {
+            "question": "What are Python's list slicing techniques?",
+            "answer": "List slicing allows you to access a portion of a list by specifying a start index, end index, and step. For example, `my_list[1:5]` returns elements from index 1 to 4, while `my_list[::2]` returns every second element."
+        },
+        {
+            "question": "How do you use Python's `with` statement?",
+            "answer": "The `with` statement simplifies exception handling by encapsulating common preparation and cleanup tasks. It ensures that resources are properly managed by automatically calling the `__enter__` and `__exit__` methods of context managers."
+        },
+        {
+            "question": "What is the purpose of `self` in Python class methods?",
+            "answer": "`self` refers to the instance of the class on which a method is called. It allows access to instance attributes and methods from within the class. It is a convention but is not a keyword in Python."
+        },
+        {
+            "question": "How do you manage packages in Python?",
+            "answer": "Packages in Python are managed using package managers like `pip`. You can install, upgrade, and remove packages using `pip` commands. For example, `pip install package_name` installs a package, and `pip list` shows installed packages."
+        },
+        {
+            "question": "How does Python handle multi-threading?",
+            "answer": "Python's multi-threading support is limited by the Global Interpreter Lock (GIL), which allows only one thread to execute Python bytecode at a time. For CPU-bound tasks, multi-threading may not provide performance benefits, but it can be useful for I/O-bound tasks."
+        },
+        {
+            "question": "What is the use of the `super()` function in Python?",
+            "answer": "The `super()` function is used to call methods from a parent class in a child class. It is commonly used in inheritance to extend or modify the behavior of inherited methods."
+        },
+        {
+            "question": "What are Python's built-in functions?",
+            "answer": "Python provides a variety of built-in functions, such as `len()`, `type()`, `max()`, `min()`, `sum()`, `sorted()`, `range()`, `map()`, `filter()`, and `reduce()`. These functions perform common tasks and operations."
+        },
+        {
+            "question": "What is the purpose of the `__str__` method in Python?",
+            "answer": "The `__str__` method is used to define a string representation of an object. It is called by the `str()` function and the `print()` function to provide a human-readable string representation of an object."
+        },
+        {
+            "question": "How do you implement a singleton pattern in Python?",
+            "answer": "The singleton pattern ensures that a class has only one instance. It can be implemented by overriding the `__new__` method to control the instance creation and ensuring that only one instance is created and returned."
+        },
+        {
+            "question": "What is the difference between `deepcopy` and `copy` modules?",
+            "answer": "The `copy` module provides `copy()` for shallow copying, where only the outer object is copied. The `deepcopy` function from the `copy` module performs a deep copy, where all nested objects are also copied recursively."
+        }
+    ],
+    "React": [
+        {
+            "question": "What is React and what are its key features?",
+            "answer": "React is a JavaScript library for building user interfaces, developed by Facebook. Key features include component-based architecture, virtual DOM for efficient rendering, unidirectional data flow, and the ability to build reusable UI components."
+        },
+        {
+            "question": "What is JSX?",
+            "answer": "JSX (JavaScript XML) is a syntax extension for JavaScript that allows writing HTML-like code within JavaScript. It makes it easier to create React elements and components with a familiar syntax."
+        },
+        {
+            "question": "How do you manage state in React?",
+            "answer": "State in React is managed using the `useState` hook in functional components and `this.state` in class components. The `useState` hook allows you to add state to functional components, while class components use `this.state` and `this.setState()` for state management."
+        },
+        {
+            "question": "What is the purpose of React's `useEffect` hook?",
+            "answer": "`useEffect` is a hook used to perform side effects in functional components. It can be used to fetch data, set up subscriptions, or manually manipulate the DOM. It runs after the component renders and can be configured to run conditionally."
+        },
+        {
+            "question": "What is the difference between `props` and `state` in React?",
+            "answer": "`props` are used to pass data from parent components to child components and are immutable. `state` is used to manage data within a component and can be changed using `setState` or `useState`."
+        },
+        {
+            "question": "What are React Hooks?",
+            "answer": "React Hooks are functions that let you use state and other React features in functional components. Common hooks include `useState`, `useEffect`, `useContext`, and `useReducer`. Hooks enable functional components to have state and lifecycle features."
+        },
+        {
+            "question": "What is the virtual DOM in React?",
+            "answer": "The virtual DOM is a lightweight representation of the real DOM. React uses the virtual DOM to efficiently update the user interface by comparing the virtual DOM with the real DOM and applying only the necessary changes."
+        },
+        {
+            "question": "How do you handle events in React?",
+            "answer": "Events in React are handled using camelCase syntax, such as `onClick` instead of `onclick`. Event handlers are passed as props to React elements and can be defined as methods or functions."
+        },
+        {
+            "question": "What is a React component?",
+            "answer": "A React component is a reusable piece of UI that can be either a function or a class. Components can manage their own state, handle events, and render content based on props and state."
+        },
+        {
+            "question": "How do you pass data between components in React?",
+            "answer": "Data is passed between components using `props`. A parent component can pass data to a child component through attributes, and the child component can access the data via `props`."
+        },
+        {
+            "question": "What is the purpose of `shouldComponentUpdate` in React?",
+            "answer": "`shouldComponentUpdate` is a lifecycle method used in class components to determine whether a component should re-render when it receives new props or state. It helps optimize performance by preventing unnecessary renders."
+        },
+        {
+            "question": "What are React Fragments?",
+            "answer": "React Fragments are used to group a list of children without adding extra nodes to the DOM. They are useful for returning multiple elements from a component's render method without wrapping them in an additional element."
+        },
+        {
+            "question": "What is `context` in React?",
+            "answer": "React's `context` is a way to pass data through the component tree without having to pass props down manually at every level. It is useful for managing global state or providing data that many components need."
+        },
+        {
+            "question": "How do you handle forms in React?",
+            "answer": "Forms in React are handled using controlled components. Form elements like input fields have their values controlled by React state. Event handlers like `onChange` update the state, which in turn updates the form element."
+        },
+        {
+            "question": "What is the `useReducer` hook in React?",
+            "answer": "`useReducer` is a hook that is used for managing more complex state logic in functional components. It is similar to `useState` but allows for handling state updates with a reducer function."
+        },
+        {
+            "question": "What is `React.memo`?",
+            "answer": "`React.memo` is a higher-order component that memoizes the result of a functional component's render. It prevents unnecessary re-renders by comparing props and only re-rendering if props have changed."
+        },
+        {
+            "question": "What is the purpose of `key` prop in React?",
+            "answer": "The `key` prop is used to identify elements in a list and help React optimize rendering. Each element in a list should have a unique `key` to help React track which items have changed, been added, or removed."
+        },
+        {
+            "question": "How do you handle errors in React components?",
+            "answer": "Errors in React components can be handled using error boundaries. An error boundary is a higher-order component that catches JavaScript errors anywhere in its child component tree and logs those errors, displaying a fallback UI instead."
+        },
+        {
+            "question": "What are higher-order components in React?",
+            "answer": "Higher-order components (HOCs) are functions that take a component and return a new component with additional props or behavior. They are used to reuse component logic and enhance components with additional functionality."
+        },
+        {
+            "question": "What is the `useContext` hook in React?",
+            "answer": "`useContext` is a hook that allows functional components to access the value of a context. It simplifies consuming context compared to the traditional `Context.Consumer` component."
+        },
+        {
+            "question": "How do you optimize performance in React applications?",
+            "answer": "Performance in React applications can be optimized using techniques like memoizing components with `React.memo`, using the `useCallback` and `useMemo` hooks, lazy loading components, and optimizing rendering with proper key usage in lists."
+        },
+        {
+            "question": "What are controlled components in React?",
+            "answer": "Controlled components are form elements whose value is controlled by React state. The state is updated via event handlers, and the form element's value is derived from this state, ensuring that the component reflects the current state."
+        },
+        {
+            "question": "What is the `useRef` hook in React?",
+            "answer": "`useRef` is a hook that returns a mutable ref object which persists across re-renders. It is often used to access DOM elements directly or to store values that do not trigger re-renders when changed."
+        },
+        {
+            "question": "What are React Portals?",
+            "answer": "React Portals provide a way to render children into a DOM node outside the parent component's hierarchy. They are useful for managing modals, tooltips, or other components that need to escape overflow or z-index issues."
+        }
+    ],
+    "HTML": [
+        {
+            "question": "What is HTML?",
+            "answer": "HTML (HyperText Markup Language) is the standard language used to create and design web pages. It defines the structure and content of a webpage using elements and tags."
+        },
+        {
+            "question": "What is the purpose of the `<!DOCTYPE html>` declaration?",
+            "answer": "The `<!DOCTYPE html>` declaration defines the document type and version of HTML being used. It helps the browser render the page correctly by ensuring it adheres to HTML5 standards."
+        },
+        {
+            "question": "What are HTML elements?",
+            "answer": "HTML elements are the building blocks of an HTML document. They are defined by tags, such as `<div>`, `<a>`, `<p>`, and `<img>`, which can contain attributes and content."
+        },
+        {
+            "question": "What is the difference between `class` and `id` attributes in HTML?",
+            "answer": "The `class` attribute is used to apply styles or JavaScript functionality to multiple elements, while the `id` attribute is used to uniquely identify a single element. IDs must be unique within a page, while classes can be reused."
+        },
+        {
+            "question": "What is the role of the `<head>` element in HTML?",
+            "answer": "The `<head>` element contains meta-information about the HTML document, such as its title, character encoding, linked stylesheets, and scripts. It is not displayed directly on the web page."
+        },
+        {
+            "question": "What are semantic HTML elements?",
+            "answer": "Semantic HTML elements convey meaning about their content. Examples include `<header>`, `<footer>`, `<article>`, and `<section>`. They help with accessibility and SEO by providing clear structure and context."
+        },
+        {
+            "question": "How do you create a hyperlink in HTML?",
+            "answer": "A hyperlink is created using the `<a>` tag. The `href` attribute specifies the URL of the link. Example: `<a href='https://www.example.com'>Click here</a>`."
+        },
+        {
+            "question": "What is the difference between block-level and inline elements?",
+            "answer": "Block-level elements (e.g., `<div>`, `<p>`) take up the full width available and start on a new line. Inline elements (e.g., `<span>`, `<a>`) only take up as much width as necessary and do not start on a new line."
+        },
+        {
+            "question": "How do you include comments in HTML?",
+            "answer": "Comments in HTML are added using `<!-- comment -->`. Comments are not displayed in the browser and are used for notes and documentation within the HTML code."
+        },
+        {
+            "question": "What is the `alt` attribute in the `<img>` tag?",
+            "answer": "The `alt` attribute provides alternative text for an image if it cannot be displayed. It is important for accessibility as it describes the image content to users with visual impairments."
+        },
+        {
+            "question": "How do you create a table in HTML?",
+            "answer": "A table is created using the `<table>` tag. Rows are defined with `<tr>`, headers with `<th>`, and cells with `<td>`. Example: `<table><tr><th>Header</th></tr><tr><td>Data</td></tr></table>`."
+        },
+        {
+            "question": "What is the purpose of the `<form>` element in HTML?",
+            "answer": "The `<form>` element is used to create interactive forms for user input. It can contain various form controls like `<input>`, `<textarea>`, and `<select>`, and it defines how data is sent to a server."
+        },
+        {
+            "question": "How do you add a video to an HTML page?",
+            "answer": "A video is added using the `<video>` tag. The `src` attribute specifies the video file, and attributes like `controls` can be used to add playback controls. Example: `<video src='video.mp4' controls></video>`."
+        },
+        {
+            "question": "What is the purpose of the `<meta>` tag in HTML?",
+            "answer": "The `<meta>` tag provides metadata about the HTML document, such as character encoding, author information, and viewport settings. It is placed within the `<head>` element."
+        },
+        {
+            "question": "How do you include external CSS or JavaScript files in an HTML document?",
+            "answer": "External CSS is included using the `<link>` tag with the `rel='stylesheet'` attribute in the `<head>` element. External JavaScript is included using the `<script>` tag with the `src` attribute, typically placed before the closing `</body>` tag."
+        },
+        {
+            "question": "What is the `data-*` attribute in HTML?",
+            "answer": "The `data-*` attribute allows you to store custom data attributes on HTML elements. The `*` can be replaced with any name, and the data can be accessed via JavaScript using `dataset`. Example: `<div data-info='value'></div>`."
+        },
+        {
+            "question": "How do you use the `<iframe>` element in HTML?",
+            "answer": "The `<iframe>` element is used to embed another HTML document within the current page. The `src` attribute specifies the URL of the embedded document. Example: `<iframe src='https://www.example.com'></iframe>`."
+        },
+        {
+            "question": "What are the semantic elements `<article>` and `<section>` used for?",
+            "answer": "`<article>` is used to represent a self-contained piece of content, such as a blog post or news article. `<section>` is used to group related content within a page, often with a heading."
+        },
+        {
+            "question": "How do you include audio in an HTML document?",
+            "answer": "Audio is included using the `<audio>` tag. The `src` attribute specifies the audio file, and attributes like `controls` can be used to add playback controls. Example: `<audio src='audio.mp3' controls></audio>`."
+        },
+        {
+            "question": "What is the purpose of the `target` attribute in links?",
+            "answer": "The `target` attribute specifies where to open the linked document. Values include `_blank` (new tab/window), `_self` (same frame), `_parent` (parent frame), and `_top` (full window)."
+        },
+        {
+            "question": "How do you create a drop-down list in HTML?",
+            "answer": "A drop-down list is created using the `<select>` element with `<option>` elements inside it. Example: `<select><option value='1'>Option 1</option><option value='2'>Option 2</option></select>`."
+        },
+        {
+            "question": "What is the purpose of the `<meta charset='UTF-8'>` tag?",
+            "answer": "The `<meta charset='UTF-8'>` tag specifies the character encoding for the HTML document. `UTF-8` is a widely-used encoding that supports various characters and symbols from different languages."
+        },
+        {
+            "question": "What is the `placeholder` attribute in HTML forms?",
+            "answer": "The `placeholder` attribute provides a hint or example of what to enter in an input field. It displays text within the input field that disappears when the user starts typing. Example: `<input type='text' placeholder='Enter your name'>`."
+        },
+        {
+            "question": "How do you create a button in HTML?",
+            "answer": "A button is created using the `<button>` element or the `<input type='button'>` element. Example: `<button>Click Me</button>` or `<input type='button' value='Click Me'>`."
+        }
+    ],
+    "CSS": [
+        {
+            "question": "What is CSS?",
+            "answer": "CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML. It controls the layout, colors, fonts, and overall design of web pages."
+        },
+        {
+            "question": "How do you include CSS in an HTML document?",
+            "answer": "CSS can be included in an HTML document in three ways: inline styles using the `style` attribute, internal styles using the `<style>` tag in the `<head>` section, and external styles using the `<link>` tag to link to an external CSS file."
+        },
+        {
+            "question": "What is the purpose of the `box-sizing` property in CSS?",
+            "answer": "The `box-sizing` property controls how the total width and height of an element are calculated. `content-box` is the default value, where width and height apply to the content only, while `border-box` includes padding and border in the total width and height."
+        },
+        {
+            "question": "What are CSS pseudo-classes?",
+            "answer": "CSS pseudo-classes are used to define the special states of elements. Examples include `:hover` (when an element is hovered over), `:focus` (when an element has focus), and `:nth-child(n)` (selects elements based on their position in a parent)."
+        },
+        {
+            "question": "How do you center an element horizontally in CSS?",
+            "answer": "To center an element horizontally, you can use `margin: auto` on a block-level element with a specified width, or use `text-align: center` on its parent container for inline or inline-block elements." 
+        },
+        {
+            "question": "What is Flexbox in CSS?",
+            "answer": "Flexbox is a layout module in CSS that allows you to create complex layouts with ease. It provides properties like `display: flex`, `justify-content`, `align-items`, and `flex-direction` to control the alignment, direction, and distribution of items in a container."
+        },
+        {
+            "question": "How do you apply styles to specific elements in CSS?",
+            "answer": "Styles can be applied to specific elements using selectors. Examples include element selectors (e.g., `p {}`), class selectors (e.g., `.className {}`), ID selectors (e.g., `#idName {}`), and attribute selectors (e.g., `[type='text'] {}`)."
+        },
+        {
+            "question": "What is the difference between `padding` and `margin` in CSS?",
+            "answer": "Padding is the space between the content and the border of an element, while margin is the space outside the border of an element. Padding is inside the element's box, while margin is outside it."
+        },
+        {
+            "question": "How do you create a responsive design in CSS?",
+            "answer": "Responsive design can be achieved using media queries, which apply styles based on the device's screen size or other characteristics. Example: `@media (max-width: 600px) { .container { width: 100%; } }`."
+        },
+        {
+            "question": "What is CSS Grid?",
+            "answer": "CSS Grid is a layout system that provides a two-dimensional grid-based layout. It allows you to create complex layouts with rows and columns using properties like `grid-template-rows`, `grid-template-columns`, and `grid-area`."
+        },
+        {
+            "question": "How do you use CSS transitions?",
+            "answer": "CSS transitions allow you to animate changes to CSS properties over time. The `transition` property specifies the duration, delay, and properties to animate. Example: `transition: background-color 0.3s ease;`."
+        },
+        {
+            "question": "What are CSS variables?",
+            "answer": "CSS variables, or custom properties, allow you to store values in a reusable way. They are defined using `--variable-name` and accessed with `var(--variable-name)`. Example: `--main-color: #333; color: var(--main-color);`."
+        },
+        {
+            "question": "How do you use media queries in CSS?",
+            "answer": "Media queries are used to apply different styles based on the device's characteristics, such as screen size or resolution. They are defined using `@media` followed by a condition. Example: `@media (max-width: 768px) { .container { width: 100%; } }`."
+        },
+        {
+            "question": "What is the `:root` pseudo-class in CSS?",
+            "answer": "The `:root` pseudo-class represents the highest-level parent element in the document, which is usually the `<html>` element. It is commonly used to define CSS variables that can be accessed throughout the document."
+        },
+        {
+            "question": "What is the `z-index` property in CSS?",
+            "answer": "The `z-index` property controls the stacking order of positioned elements. Elements with a higher `z-index` are stacked above those with a lower value. It only works on elements that have a position value other than `static`."
+        }
+    ]
+}

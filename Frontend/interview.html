@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4a90e2;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #357abd;
+        }
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fafafa;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        li strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #4a90e2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interview Questions Generator</h1>
+        
+        <label for="category">Select Category:</label>
+        <select id="category">
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+        </select>
+        
+        <label for="number">Number of Questions:</label>
+        <input type="number" id="number" value="10" min="1" max="100">
+        
+        <button onclick="fetchQuestions()">Get Questions</button>
+        
+        <h2>Questions</h2>
+        <ul id="questions-list"></ul>
+    </div>
+    
+    <script>
+        async function fetchQuestions() {
+            const category = document.getElementById('category').value;
+            const number = document.getElementById('number').value;
+            const url = `http://localhost:3000/api/interview-questions?category=${category}&number=${number}`;
+            
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                
+                const questions = await response.json();
+                displayQuestions(questions);
+            } catch (error) {
+                console.error('Error fetching questions:', error);
+                alert('Error fetching questions: ' + error.message);
+            }
+        }
+        
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+        
+        function displayQuestions(questions) {
+            const numberOfQuestions = Math.min(parseInt(document.getElementById('number').value, 10), 25);
+            const list = document.getElementById('questions-list');
+            list.innerHTML = ''; // Clear previous questions
+            
+            // Shuffle questions and limit to 25
+            const shuffledQuestions = shuffleArray(questions).slice(0, numberOfQuestions);
+            
+            shuffledQuestions.forEach(question => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>Question:</strong> ${question.question}<br><strong>Answer:</strong> ${question.answer}`;
+                list.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>
